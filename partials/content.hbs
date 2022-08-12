@@ -5,12 +5,11 @@
                 <span class="gh-article-label">Latest newsletter</span>
             {{/is}}
             <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-            {{#primary_tag}}
-                <h3><a class="gh-tag-name post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a></h3>
-            {{/primary_tag}}
         </div>
     {{/is}}
-
+    {{#primary_tag}}
+        <h3><a class="gh-tag-name post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a></h3>
+    {{/primary_tag}}
     <h1 class="gh-article-title">{{title}}</h1>
 
     {{#if custom_excerpt}}
