@@ -1,12 +1,10 @@
 <article class="gh-card {{post_class}}">
     <a class="gh-card-link" href="{{url}}">
-        {{#primary_tag}}
-            <span class="single-meta-item single-meta-tag">
-                <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
-            </span>
-        {{/primary_tag}}
         <header class="gh-card-header">
             <h2 class="gh-card-title">{{title}}</h2>
+            {{#primary_tag}}
+                <a class="gh-tag-name post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+            {{/primary_tag}}
         </header>
 
         <div class="gh-card-excerpt">{{excerpt}}</div>
