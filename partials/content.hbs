@@ -2,8 +2,13 @@
     {{#is "post, home"}}
         <div class="gh-article-meta">
             {{#is "home"}}
-                <span class="gh-article-label">Latest issue</span>
+                <span class="gh-article-label">Latest newsletter</span>
             {{/is}}
+            {{#primary_tag}}
+                <span class="single-meta-item single-meta-tag">
+                    <a class="post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a>
+                </span>
+            {{/primary_tag}}
             <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
         </div>
     {{/is}}
@@ -45,17 +50,17 @@
                     <a class="gh-navigation-link u-hover reverse" href="{{url}}">
                         <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
                         <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-                        Previous<span class="gh-navigation-hide">&nbsp;issue</span>
+                        Previous<span class="gh-navigation-hide">&nbsp;newsletter</span>
                     </a>
                 {{/prev_post}}
             </div>
 
-            <a class="gh-navigation-middle" href="/page/2"><span>Browse</span> all issues</a>
+            <a class="gh-navigation-middle" href="/page/2"><span>Browse</span> all newsletters</a>
 
             <div class="gh-navigation-next">
                 {{#next_post}}
                     <a class="gh-navigation-link u-hover" href="{{url}}">
-                        Next<span class="gh-navigation-hide">&nbsp;issue</span>
+                        Next<span class="gh-navigation-hide">&nbsp;newsletter</span>
                         <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                         <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
                     </a>

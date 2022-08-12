@@ -9,13 +9,13 @@
                 {{#if description}}
                     {{description}}
                 {{else}}
-                    A collection of {{plural pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                    A collection of {{plural pagination.total empty="0 issues" singular="% newsletter" plural="% newsletters"}}
                 {{/if}}
             </div>
         </header>
     </section>
 
-    {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+    {{#get "posts" filter="featured:true" limit="3" as |featured|}}
         {{#if featured}}
             <section class="gh-section gh-section-featured">
                 <h3 class="gh-section-title"><span>Featured</span></h3>
@@ -30,7 +30,7 @@
     {{/get}}
 
     <section class="gh-section">
-        <h3 class="gh-section-title"><span>Latest</span></h3>
+        <h3 class="gh-section-title"><span>All Newsletters</span></h3>
 
         <div class="gh-feed">
             {{#get "posts" limit="all"}}
