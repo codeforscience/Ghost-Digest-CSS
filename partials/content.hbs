@@ -1,14 +1,12 @@
 <header class="gh-article-header gh-canvas">
     {{#is "post, home"}}
         <div class="gh-article-meta">
-                {{#is "home"}}
-                    <span class="gh-article-label">Latest newsletter</span>
-                {{/is}}
+            {{#is "home"}}
+                <span class="gh-article-label">Latest newsletter</span>
+            {{/is}}
             <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
             {{#primary_tag}}
-                <a class="gh-tag-name post-tag post-tag-{{slug}}" 
-                    style="display:block;"
-                    href="{{url}}">{{name}}</a>
+                <h3><a class="gh-tag-name post-tag post-tag-{{slug}}" href="{{url}}">{{name}}</a></h3>
             {{/primary_tag}}
         </div>
     {{/is}}
