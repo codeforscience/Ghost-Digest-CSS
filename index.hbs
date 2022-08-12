@@ -30,27 +30,17 @@
     {{/get}}
 
     <section class="gh-section">
-        {{#get "tags" include="count.posts" limit="all" as |topic|}}
+        {{#get "tags" limit="all"}}
             <section class="gh-section">
-                <h3 class="gh-section-title">Newsletter Topics</h3>
-
-                <div class="gh-topic">
-                    {{#foreach topic}}
-                        <a class="gh-topic-item" href="{{url}}">
-                            <h3 class="gh-topic-name">{{name}}</h3>
-                            <span class="gh-topic-count">
-                                {{plural count.posts empty="0 issues" singular="% issue" plural="% issues"}}
-                            </span>
+                <div class="gh-tag">
+                    {{#foreach tag}}
+                        <a class="gh-tag-item" href="{{url}}">
+                            <h3 class="gh-tag-name">{{name}}</h3>
                         </a>
                     {{/foreach}}
                 </div>
             </section>
         {{/get}}
-        <a class="gh-navigation-link u-hover reverse" href="{{url}}">
-            <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-            <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-            Previous<span class="gh-navigation-hide">&nbsp;newsletter</span>
-        </a>
         <h3 class="gh-section-title"><span>All Newsletters</span></h3>
 
         <div class="gh-feed">
