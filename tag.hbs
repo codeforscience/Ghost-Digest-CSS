@@ -4,13 +4,13 @@
     {{#tag}}
         <section class="gh-pagehead">
             <header class="gh-pagehead-content">
-                <h1 class="gh-tag-name gh-pagehead-title">{{name}}</h1>
+                <h1 class="gh-pagehead-title">{{name}}</h1>
 
                 <div class="gh-tag-description gh-pagehead-description">
                     {{#if description}}
                         {{description}}
                     {{else}}
-                        A collection of {{plural ../pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                        A collection of {{plural ../pagination.total empty="0 newletters" singular="% newletter" plural="% newletters"}}
                     {{/if}}
                 </div>
             </header>

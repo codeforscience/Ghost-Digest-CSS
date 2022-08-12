@@ -8,14 +8,12 @@
             <div class="gh-pagehead-description">
                 {{#if description}}
                     {{description}}
-                {{else}}
-                    A collection of {{plural pagination.total empty="0 issues" singular="% newsletter" plural="% newsletters"}}
                 {{/if}}
             </div>
         </header>
     </section>
 
-    {{#get "posts" filter="featured:true" limit="3" as |featured|}}
+    {{#get "posts" include="tags" filter="featured:true" limit="3" as |featured|}}
         {{#if featured}}
             <section class="gh-section gh-section-featured">
                 <h3 class="gh-section-title"><span>Featured</span></h3>
@@ -28,12 +26,29 @@
             </section>
         {{/if}}
     {{/get}}
-    
+
+    <!-- <section class="gh-section">
+        <h3 class="gh-section-title"><span>Newsletter Topics</span></h3>
+        {{#get "tags" limit="all"}}
+        <div class="gh-feed">
+          {{#foreach tags}}
+            <div class="topic">
+                <span class="topic-header">
+                    <h2 class="topic-name">
+                        <a href="{{url}}">{{name}}</a>
+                    </h2>
+                </span>
+            </div>
+          {{/foreach}}
+        </div>
+         {{/get}}
+    </section> -->
+
     <section class="gh-section">
         <h3 class="gh-section-title"><span>All Newsletters</span></h3>
 
         <div class="gh-feed">
-            {{#get "posts" limit="all"}}
+            {{#get "posts" include="tags" limit="all"}}
                 {{#foreach posts}}
                     {{> loop}}
                 {{/foreach}}

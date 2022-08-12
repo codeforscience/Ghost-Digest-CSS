@@ -2,7 +2,7 @@
 @import "fonts.css";
 
 :root {
-    --font-sans: Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
+    --font-sans: 'Work Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --font-serif: "PT Serif", Times, serif; /* stylelint-disable-line value-keyword-case */
     --h1-size: 4.8rem;
 }
@@ -146,7 +146,10 @@ body {
 }
 
 .gh-featured .gh-card-link {
-    padding: 3.6rem 3.2rem;
+    padding: 3.6rem 3.2rem 0;
+}
+.gh-featured footer {
+    padding: 0 3.2rem 3.6rem;
 }
 
 .gh-subscribe {
@@ -237,6 +240,7 @@ body:not(.home-template) .no-image .gh-article-header {
 
 .gh-article-meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 1.6rem;
     font-size: 1.3rem;
@@ -248,13 +252,33 @@ body:not(.home-template) .no-image .gh-article-header {
 
 .gh-article-label {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-right: 1.6rem;
     color: var(--ghost-accent-color);
 }
 
+.gh-article-home {
+  flex-basis:100%;
+}
+
 .gh-article-title {
     font-weight: 800;
+}
+
+.gh-tag-name {
+  border:1px solid;
+  border-color: var(--ghost-accent-color);
+  border-radius: 2px;
+  color: var(--ghost-accent-color);
+  font-family: GT Pressura Mono,mono, 'Work Sans';
+  /* font-size: .75rem; */
+  font-size:12px;
+  letter-spacing: 0.6px;
+  line-height: 16px;
+  margin-right: 8px;
+  padding:5px 8px;
+  text-transform: uppercase;
 }
 
 .gh-article-image {
